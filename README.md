@@ -2,6 +2,14 @@
 
 Plataforma de **atendimento inteligente** para vistos e passaportes. Esta entrega da Sprint 4 consolida os módulos das sprints anteriores em um fluxo unificado de **agentes inteligentes**, com interpretação de linguagem natural, registro estruturado de interações e governança de IA.
 
+## 🎥 Demonstração em vídeo
+
+Veja o sistema em funcionamento (até 3 minutos):
+
+▶ **[Assistir no YouTube](https://youtu.be/50RbDbicGEI)**
+
+O vídeo mostra a interação do usuário com o chatbot, a interpretação de perguntas sobre o processo, a resposta gerada pelo sistema, o registro da interação no histórico e a interface funcional para consulta de informações.
+
 ## Sumário
 
 1. [Visão geral](#visão-geral)
