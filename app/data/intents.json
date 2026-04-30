@@ -1,0 +1,88 @@
+{
+  "intents": [
+    {
+      "name": "consultar_status",
+      "description": "Usuário quer saber em que etapa está o processo dele.",
+      "examples": [
+        "Qual o status do meu processo",
+        "Como anda meu visto",
+        "Em que etapa está minha solicitação",
+        "Já analisaram meu processo",
+        "Quero ver o andamento",
+        "Status do pedido",
+        "Saiu o resultado do meu visto"
+      ]
+    },
+    {
+      "name": "documentos_necessarios",
+      "description": "Usuário quer saber quais documentos enviar.",
+      "examples": [
+        "Quais documentos preciso enviar",
+        "Que papéis devo apresentar",
+        "Lista de documentos para visto americano",
+        "O que preciso para o passaporte",
+        "Documentação necessária",
+        "Quais arquivos enviar",
+        "Preciso de qual documento"
+      ]
+    },
+    {
+      "name": "prazo_processo",
+      "description": "Usuário quer saber prazos de análise/entrega.",
+      "examples": [
+        "Quanto tempo demora",
+        "Qual o prazo do visto",
+        "Em quantos dias fica pronto",
+        "Demora muito o processo",
+        "Prazo de entrega",
+        "Quando recebo a resposta"
+      ]
+    },
+    {
+      "name": "tipos_de_visto",
+      "description": "Usuário quer informações sobre tipos de visto.",
+      "examples": [
+        "Quais tipos de visto existem",
+        "Diferença entre visto de turismo e estudo",
+        "Que visto preciso para morar",
+        "Tipos de visto para os EUA",
+        "Quero um visto de trabalho",
+        "Visto de estudante"
+      ]
+    },
+    {
+      "name": "saudacao",
+      "description": "Cumprimentos e início de conversa.",
+      "examples": [
+        "Olá",
+        "Oi",
+        "Bom dia",
+        "Boa tarde",
+        "Boa noite",
+        "Tudo bem"
+      ]
+    },
+    {
+      "name": "agradecimento",
+      "description": "Encerramento ou agradecimento.",
+      "examples": [
+        "Obrigado",
+        "Valeu",
+        "Muito obrigada",
+        "Agradeço",
+        "Tchau"
+      ]
+    },
+    {
+      "name": "fora_do_escopo",
+      "description": "Pergunta que não pertence ao domínio de vistos/passaportes.",
+      "examples": [
+        "Qual a previsão do tempo",
+        "Me ajuda com receita de bolo",
+        "Quem ganhou o jogo",
+        "Conta uma piada",
+        "Qual o melhor restaurante"
+      ]
+    }
+  ]
+}

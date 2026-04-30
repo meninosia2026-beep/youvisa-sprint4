@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOUVISA — Atendimento Inteligente</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">YV</div>
+      <div>
+        <h1>YOUVISA</h1>
+        <p>Plataforma de Atendimento Inteligente — Sprint 4</p>
+      </div>
+    </div>
+    <div class="badge" id="health-badge">conectando...</div>
+  </header>
+
+  <main class="grid">
+    <!-- Coluna esquerda: processo do cliente -->
+    <section class="card">
+      <h2>Meu Processo</h2>
+      <div class="process-picker">
+        <label for="process-select">Selecione um processo de demonstração:</label>
+        <select id="process-select"></select>
+      </div>
+      <div id="process-info" class="process-info"></div>
+
+      <h3>Documentos</h3>
+      <ul id="documents-list" class="docs-list"></ul>
+    </section>
+
+    <!-- Coluna central: chatbot -->
+    <section class="card chat-card">
+      <h2>Chat de Atendimento</h2>
+      <div id="chat-window" class="chat-window">
+        <div class="msg bot">
+          <div class="bubble">Olá! Sou o assistente virtual da YOUVISA. Posso ajudar com dúvidas sobre vistos, documentos, prazos e o status do seu processo. O que você precisa?</div>
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-form">
+        <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off" required />
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div class="suggestions">
+        <button type="button" class="suggestion">Qual o status do meu processo?</button>
+        <button type="button" class="suggestion">Quais documentos preciso enviar?</button>
+        <button type="button" class="suggestion">Quanto tempo demora um visto de turismo?</button>
+        <button type="button" class="suggestion">Quais tipos de visto existem?</button>
+      </div>
+    </section>
+
+    <!-- Coluna direita: histórico estruturado -->
+    <section class="card">
+      <h2>Histórico de Interações</h2>
+      <p class="hint">Registro estruturado dos eventos do atendimento (intenção, entidades, governança).</p>
+      <button id="refresh-history" class="ghost">Atualizar histórico</button>
+      <ul id="history-list" class="history-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>YOUVISA Sprint 4 — Multiagentes • NLP • Governança de IA</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

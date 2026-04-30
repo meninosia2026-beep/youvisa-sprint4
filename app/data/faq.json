@@ -1,0 +1,31 @@
+{
+  "consultar_status": {
+    "default": "Encontrei seu processo no sistema. Status atual: {status}. Última atualização: {updated_at}.",
+    "no_process": "Para consultar o status preciso do número do seu processo ou do e-mail cadastrado. Pode me informar?"
+  },
+  "documentos_necessarios": {
+    "turismo": "Para visto de turismo você precisa de: passaporte válido, foto recente 5x7, comprovante de renda dos últimos 3 meses, comprovante de residência, reserva de hotel e passagens aéreas, e formulário DS-160 preenchido (quando aplicável).",
+    "estudo": "Para visto de estudo você precisa de: passaporte válido, carta de aceite da instituição, comprovante financeiro, formulário I-20/CAS, histórico escolar e proficiência no idioma (TOEFL/IELTS).",
+    "trabalho": "Para visto de trabalho você precisa de: passaporte válido, carta da empresa empregadora, contrato de trabalho, comprovante de qualificação, formulário específico do consulado e histórico profissional.",
+    "default": "Os documentos básicos são: passaporte válido (mínimo 6 meses), foto recente, comprovante de residência e comprovante financeiro. Os documentos específicos variam conforme o tipo de visto. Você sabe me dizer qual tipo está solicitando?"
+  },
+  "prazo_processo": {
+    "turismo": "O prazo médio para visto de turismo é de 15 a 30 dias úteis após o envio completo dos documentos.",
+    "estudo": "O prazo médio para visto de estudo é de 30 a 60 dias úteis, dependendo do consulado.",
+    "trabalho": "O prazo médio para visto de trabalho é de 45 a 90 dias úteis.",
+    "passaporte": "A emissão de passaporte leva em média 6 dias úteis após coleta biométrica na Polícia Federal.",
+    "default": "Os prazos variam conforme o tipo de solicitação. De forma geral: vistos de turismo (15-30 dias úteis), estudo (30-60), trabalho (45-90) e passaportes (6 dias úteis após biometria)."
+  },
+  "tipos_de_visto": {
+    "default": "Os principais tipos são: \n• Turismo (B1/B2): viagens de lazer ou negócios curtos. \n• Estudo (F1/J1): cursos e intercâmbio. \n• Trabalho (H1B/L1): emprego no exterior. \n• Imigrante: residência permanente. Qual deles te interessa?"
+  },
+  "saudacao": {
+    "default": "Olá! Sou o assistente virtual da YOUVISA. Posso ajudar com dúvidas sobre vistos, passaportes, documentos e o status do seu processo. O que você precisa?"
+  },
+  "agradecimento": {
+    "default": "Por nada! Se precisar de mais alguma coisa sobre seu processo, é só chamar."
+  },
+  "fora_do_escopo": {
+    "default": "Sou um assistente especializado em vistos, passaportes e processos da YOUVISA. Não consigo ajudar com esse assunto, mas posso esclarecer dúvidas sobre seu processo, documentos necessários ou prazos."
+  }
+}

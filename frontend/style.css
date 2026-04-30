@@ -1,0 +1,245 @@
+:root {
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --primary: #1f5fbf;
+  --primary-dark: #154a99;
+  --text: #1d2939;
+  --muted: #667085;
+  --border: #e4e7ec;
+  --success: #2e9e60;
+  --warn: #d97706;
+  --danger: #c0392b;
+  --bot-bubble: #eef3fb;
+  --user-bubble: #1f5fbf;
+  --shadow: 0 6px 20px rgba(20, 30, 60, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand { display: flex; align-items: center; gap: 14px; }
+
+.logo {
+  background: var(--primary);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.topbar h1 { margin: 0; font-size: 20px; }
+.topbar p { margin: 0; font-size: 13px; color: var(--muted); }
+
+.badge {
+  font-size: 12px;
+  background: #eef9f1;
+  color: var(--success);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid #cdebd6;
+}
+.badge.error { background: #fdecea; color: var(--danger); border-color: #f5c2bc; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 20px;
+  padding: 24px 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 600px;
+}
+
+.card h2 { margin: 0; font-size: 17px; }
+.card h3 { margin: 8px 0 4px; font-size: 14px; color: var(--muted); }
+.card .hint { margin: 0; font-size: 12px; color: var(--muted); }
+
+.process-picker label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+select, input, button {
+  font-size: 14px;
+  font-family: inherit;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.process-info {
+  background: #f9fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+}
+.process-info .row { display: flex; justify-content: space-between; margin: 4px 0; }
+.process-info .label { color: var(--muted); }
+.status-pill {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.status-pill.aberto { background: #eef3fb; color: var(--primary); }
+.status-pill.em_analise { background: #fff5e6; color: var(--warn); }
+.status-pill.aprovado { background: #eef9f1; color: var(--success); }
+.status-pill.recusado { background: #fdecea; color: var(--danger); }
+
+.docs-list, .history-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.docs-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+}
+.docs-list .doc-status {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef3fb;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+.docs-list .doc-status.recebido { background: #eef9f1; color: var(--success); }
+.docs-list .doc-status.aprovado { background: #eef9f1; color: var(--success); }
+.docs-list .doc-status.pendente { background: #fff5e6; color: var(--warn); }
+.docs-list .doc-status.rejeitado { background: #fdecea; color: var(--danger); }
+
+.chat-card { min-height: 600px; }
+
+.chat-window {
+  flex: 1;
+  background: #f9fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  overflow-y: auto;
+  max-height: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msg { display: flex; }
+.msg.user { justify-content: flex-end; }
+.msg .bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+.msg.bot .bubble { background: var(--bot-bubble); color: var(--text); border-bottom-left-radius: 4px; }
+.msg.user .bubble { background: var(--user-bubble); color: #fff; border-bottom-right-radius: 4px; }
+.msg .meta { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+.chat-form { display: flex; gap: 8px; }
+.chat-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.chat-form button, .ghost {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.chat-form button:hover, .ghost:hover { background: var(--primary-dark); }
+.ghost {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.ghost:hover { background: var(--primary); color: #fff; }
+
+.suggestions { display: flex; flex-wrap: wrap; gap: 6px; }
+.suggestion {
+  background: #eef3fb;
+  color: var(--primary);
+  border: 1px solid #d6e3f5;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.suggestion:hover { background: var(--primary); color: #fff; }
+
+.history-list li {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 12px;
+  background: #fafbfd;
+}
+.history-list .h-question { font-weight: 600; color: var(--text); }
+.history-list .h-answer { margin-top: 4px; color: var(--muted); }
+.history-list .h-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: #eef3fb;
+  color: var(--primary);
+  border-radius: 999px;
+}
+.tag.blocked { background: #fdecea; color: var(--danger); }
+
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: var(--muted);
+}
